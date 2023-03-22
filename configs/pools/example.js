@@ -84,7 +84,7 @@ config.primary.address = '9Doa7AhmufaZMkwE1sDmrKXdNP5VDiAuCU';
 // Coin Configuration
 config.primary.coin = {};
 config.primary.coin.name = 'Paprika';
-config.primary.coin.symbol = 'PAPY';
+config.primary.coin.symbol = 'PAPRY';
 config.primary.coin.asicboost = false;
 config.primary.coin.getinfo = false;
 config.primary.coin.hybrid = false;
