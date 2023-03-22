@@ -9,9 +9,9 @@
 
 // Miscellaneous Configuration
 const config = {};
-config.enabled = false;
+config.enabled = true;
 config.name = 'Pool1';
-config.coins = ['Bitcoin'];
+config.coins = ['kawpow'];
 
 // Banning Configuration
 config.banning = {};
@@ -24,12 +24,12 @@ config.banning.purgeInterval = 300;
 config.ports = [];
 
 const ports1 = {};
-ports1.port = 3002;
+ports1.port = 3432;
 ports1.enabled = true;
 ports1.type = 'shared';
 ports1.tls = false;
 ports1.difficulty = {};
-ports1.difficulty.initial = 32;
+ports1.difficulty.initial = 12;
 ports1.difficulty.minimum = 8;
 ports1.difficulty.maximum = 512;
 ports1.difficulty.targetTime = 15;
@@ -38,7 +38,7 @@ ports1.difficulty.variance = 0.3;
 config.ports.push(ports1);
 
 const ports2 = {};
-ports2.port = 3003;
+ports2.port = 3433;
 ports2.enabled = true;
 ports2.type = 'solo';
 ports2.tls = false;
@@ -53,7 +53,7 @@ config.ports.push(ports2);
 
 // P2P Configuration
 config.p2p = {};
-config.p2p.enabled = true;
+config.p2p.enabled = false;
 config.p2p.host = '127.0.0.1';
 config.p2p.port = 8333;
 
@@ -79,13 +79,13 @@ config.settings.tcpProxyProtocol = false;
 
 // Miscellaneous Configuration
 config.primary = {};
-config.primary.address = 'example';
+config.primary.address = '9Doa7AhmufaZMkwE1sDmrKXdNP5VDiAuCU';
 
 // Coin Configuration
 config.primary.coin = {};
-config.primary.coin.name = 'Bitcoin';
-config.primary.coin.symbol = 'BTC';
-config.primary.coin.asicboost = true;
+config.primary.coin.name = 'Paprika';
+config.primary.coin.symbol = 'PAPY';
+config.primary.coin.asicboost = false;
 config.primary.coin.getinfo = false;
 config.primary.coin.hybrid = false;
 config.primary.coin.parameters = {};
@@ -94,26 +94,26 @@ config.primary.coin.version = 4;
 
 // Algorithm Configuration
 config.primary.coin.algorithms = {};
-config.primary.coin.algorithms.mining = 'sha256d';
+config.primary.coin.algorithms.mining = 'kawpow';
 config.primary.coin.algorithms.block = 'sha256d';
 config.primary.coin.algorithms.coinbase = 'sha256d';
 
 // Rewards Configuration
 config.primary.coin.rewards = {};
-config.primary.coin.rewards.type = '';
+config.primary.coin.rewards.type = 'hivecoin';
 config.primary.coin.rewards.addresses = [];
 
 // Mainnet Configuration
 config.primary.coin.mainnet = {};
-config.primary.coin.mainnet.bech32 = 'bc';
+config.primary.coin.mainnet.bech32 = '';
 config.primary.coin.mainnet.bip32 = {};
 config.primary.coin.mainnet.bip32.public = Buffer.from('0488B21E', 'hex').readUInt32LE(0);
 config.primary.coin.mainnet.bip32.private = Buffer.from('0488ADE4', 'hex').readUInt32LE(0);
-config.primary.coin.mainnet.peerMagic = 'f9beb4d9';
-config.primary.coin.mainnet.pubKeyHash = Buffer.from('00', 'hex').readUInt8(0);
-config.primary.coin.mainnet.scriptHash = Buffer.from('05', 'hex').readUInt8(0);
-config.primary.coin.mainnet.wif = Buffer.from('80', 'hex').readUInt8(0);
-config.primary.coin.mainnet.coin = 'btc';
+config.primary.coin.mainnet.peerMagic = '48495645';
+config.primary.coin.mainnet.pubKeyHash = Buffer.from('20', 'hex').readUInt8(0);
+config.primary.coin.mainnet.scriptHash = Buffer.from('7A', 'hex').readUInt8(0);
+config.primary.coin.mainnet.wif = Buffer.from('70', 'hex').readUInt8(0);
+config.primary.coin.mainnet.coin = 'papry';
 
 // Testnet Configuration
 config.primary.coin.testnet = {};
@@ -132,9 +132,9 @@ config.primary.daemons = [];
 
 const daemons1 = {};
 daemons1.host = '127.0.0.1';
-daemons1.port = 8332;
-daemons1.username = '';
-daemons1.password = '';
+daemons1.port = 8555;
+daemons1.username = 'bob';
+daemons1.password = 'pass';
 config.primary.daemons.push(daemons1);
 
 // Payment Configuration
@@ -147,15 +147,15 @@ config.primary.payments.minPayment = 0.005;
 config.primary.payments.transactionFee = 0.0004;
 config.primary.payments.daemon = {};
 config.primary.payments.daemon.host = '127.0.0.1';
-config.primary.payments.daemon.port = 8332;
-config.primary.payments.daemon.username = '';
-config.primary.payments.daemon.password = '';
+config.primary.payments.daemon.port = 8555;
+config.primary.payments.daemon.username = 'bob';
+config.primary.payments.daemon.password = 'pass';
 
 // Recipients Configuration
 config.primary.recipients = [];
 
 const recipient1 = {};
-recipient1.address = 'example';
+recipient1.address = '9Doa7AhmufaZMkwE1sDmrKXdNP5VDiAuCU';
 recipient1.percentage = 0.05;
 config.primary.recipients.push(recipient1);
 
