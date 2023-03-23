@@ -11,7 +11,7 @@
 const config = {};
 config.enabled = true;
 config.name = 'Pool1';
-config.coins = ['kawpow'];
+config.coins = ['PaprikaCoin'];
 
 // Banning Configuration
 config.banning = {};
@@ -113,7 +113,7 @@ config.primary.coin.mainnet.peerMagic = '48495645';
 config.primary.coin.mainnet.pubKeyHash = Buffer.from('20', 'hex').readUInt8(0);
 config.primary.coin.mainnet.scriptHash = Buffer.from('7A', 'hex').readUInt8(0);
 config.primary.coin.mainnet.wif = Buffer.from('70', 'hex').readUInt8(0);
-config.primary.coin.mainnet.coin = 'papry';
+config.primary.coin.mainnet.coin = undefined;
 
 // Testnet Configuration
 config.primary.coin.testnet = {};
